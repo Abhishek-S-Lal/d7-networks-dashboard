@@ -16,7 +16,7 @@ const SmsCampaignMessageTab = ({ handleFormData, campaignDetails, setActiveTab }
 
     const handleFormSubmit = (e: any) => {
         e.preventDefault()
-        if (isFormValid()) setActiveTab("setup");
+        if (isFormValid()) setActiveTab("verify");
     };
     return (
         <form onSubmit={handleFormSubmit}>
@@ -52,7 +52,7 @@ const SmsCampaignMessageTab = ({ handleFormData, campaignDetails, setActiveTab }
                     onChange={(e) => handleFormData("message", e.target.value)}
                 />
                 <Flex justify={"flex-end"} gap={"md"}>
-                    {/* <Button variant="outline" radius="md">Prev</Button> */}
+                    {/* <Button variant="outline" radius="md" onClick={()=>setActiveTab("verify")}>Prev</Button> */}
                     <Button variant="filled" radius="md" type="submit" disabled={!isFormValid()}>Next</Button>
                 </Flex>
             </Stack>

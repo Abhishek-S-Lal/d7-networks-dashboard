@@ -50,7 +50,7 @@ const SmsCampaignSetupTab = ({ campaignDetails, handleFormData, setActiveTab }: 
         </Box>
 
         <Flex justify={"flex-end"} gap={"md"}>
-          <Button variant="outline" radius="md">Prev</Button>
+          <Button variant="outline" radius="md" onClick={()=>setActiveTab("message")}>Prev</Button>
           <Button variant="filled" radius="md" type="submit" disabled={!isFormValid()}>Next</Button>
         </Flex>
       </Stack>
